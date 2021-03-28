@@ -1,0 +1,440 @@
+*{
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    letter-spacing: -0.8px;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    max-width: 100%;
+}
+#body{
+    max-width: 100vw;
+    height: 100vh;
+}
+
+/* ........GRID....... */
+main{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+        "header header header"
+        "instructions screen skills";
+}
+
+/* ...........HEADER.......... */
+header{
+    grid-area: header;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(12, 27, 46);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+header>div{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+header>div>img{
+    max-height: 95%;
+}
+header>a{
+    display: none;
+    padding: 2%;
+}
+h1{
+    word-spacing: -0.5em;
+    color: rgb(233, 179, 2);
+    font-size: 200%;
+    padding: 4% 10px;
+}
+header>div:hover h1{
+    color: rgb(252, 196, 11);
+    text-shadow: -3px 2px 2px black;
+}
+/* .......GRID COLUMNS.......... */
+#instructions{
+    grid-area: instructions;
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+    border-right: 1px solid black;
+}
+.screen{
+    grid-area: screen;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border: 1px solid black;
+}
+
+#skills{
+    grid-area: skills;
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid black;
+}
+
+/* .............SIDE DIV................*/
+h4{
+    font-size: 125%;
+}
+.sideDiv{
+    background-color: rgb(225, 235, 134);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+    overflow-y: auto;
+}
+.skill_container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3vh;
+    justify-content: center;
+}
+
+.skill_container p{
+    font-size: 2vh;
+}
+
+.skillname{
+    font-size: 2.1vh;
+    margin-bottom: 1vh;
+}
+
+.skilldesc{
+    font-size: 1.2vh;
+}
+
+.skill_container > div{
+    width: 60%;
+}
+
+ul li{
+    padding: 5%;
+}
+
+/* ........START SCREEN........... */
+#startScreen{
+    background-image: url("../dibujos/portada.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.rightArrow{
+    width: 20%;
+    height: 15%;
+    background-image: url("../dibujos/rightArrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 10%;
+    bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.5px;
+    font-size: 1.4vw;
+}
+.rightArrow:hover{
+    cursor: pointer;
+    color: yellow;
+    text-shadow: -1px 1px 1px black;
+}
+/* ..............CREDITS............... */
+#credits{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(233, 179, 2);
+    color:  rgb(12, 27, 46);
+    border: 12px dashed rgb(12, 27, 46);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+#credits>div{
+    max-height: 95%;
+    overflow-y: auto;
+}
+
+#credits>div>a{
+    color:  rgb(12, 27, 46);
+    font-size: 1.2em;
+}
+#credits>a, #credits-button{
+    color: rgb(20, 18, 43);
+    font-size: 1.5em;
+    padding: 2%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#credits-button{
+    color: rgb(233, 179, 2);
+    text-shadow: -1px 1px 1px black;
+    right: 0;
+    left: auto;
+}
+/* ..............CAROUSEL............. */
+#introCarousel, .carousel-inner, .carousel-item{
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+    background-color: black;
+}
+.carousel-item>img{
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+/* .........GAME AREA......... */
+#gameArea{
+    width: 100%;
+    height: 100%;
+}
+
+#canvas{
+    width: 100%;
+    height: 70%;
+}
+
+/*---------------------- MAIN BAR-------------------------- */
+#main_bar{
+    width: 100%;
+    height: 29%;
+    background-image: url("../images/hud/wooden_table.jpg");
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#leftDiv, #rightDiv{
+    width: 15%;
+    height: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#store{
+    width: 80%;
+    height: 30%;
+    background-image: url("../images/hud/store.png");
+    background-position: center;
+    background-size: 110% 200%;
+    cursor: pointer;
+}
+
+#money{
+    width: 90%;
+    height: 30%;
+    display: flex;
+}
+
+#health{
+    background-image: url("../images/hud/hphearth.png");
+    background-position: center;
+    background-size: 100% 100%;
+    height: 75%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vw;
+}
+#health>p{
+    margin: auto;
+}
+
+#mana{
+    background-image: url("../images/hud/mpdrop.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 86%;
+    height: 75%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mana>p{
+    font-size: 1.8vw;
+    margin: auto;
+}
+
+.bar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 70%;
+    height: 90%;
+}
+
+.upgrade{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/hud/upgradeBar.png");
+    background-size: 99%;
+    height: 20%;
+    width: 100%;
+    margin-bottom: 0.3vh;
+    cursor: pointer;
+    font-size: 1.3vw;
+}
+.sdiv{
+    height: 100%;
+    width: 27%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill{
+    background-image:url("../images/skill_background.jpg");
+    width: 100%;
+    height: 75%;
+    opacity: 0.4;
+    font-size: 150%;
+}
+
+.item{
+    opacity: 0.4;
+}
+
+.level{
+    position: absolute;
+    bottom: 4%;
+    left: 2%;
+    font-size: 1.5vw;
+
+}
+.mana_cost{
+    position: absolute;
+    bottom: 4%;
+    right: 2%;
+    font-size: 1.5vw;
+
+}
+
+.item_quantity{
+    color: white;
+    font-size: 2vw;
+}
+
+.upgrade:hover, .skill:hover{
+    border: 3px solid black;
+}
+
+/*---------------------- SHOP BAR-------------------------- */
+#skills_bar{
+    display: flex;
+}
+#shop_bar{
+    display: none;
+}
+#money{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#money_amount{
+    margin: 0;
+    padding: 0%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: yellow;
+    font-size: 2vw;
+}
+#money_amount>p{
+    margin: 0;
+    padding: 0%;
+}
+#goldcoin{
+    width: 30%;
+    height: 60%;
+}
+
+/* ................MEDIA QUERIES............. */
+
+@media (max-width: 425px){
+    main{
+        grid-template-rows: 15% 40% 80% 95%;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "screen"
+            "skills"
+            "instructions";
+    }  
+     
+}
+
+@media (min-width: 426px) and (max-width: 610px){
+    main{
+        grid-template-rows: 10% 55% 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:       
+            "header header"
+            "screen screen"
+            "instructions skills";
+    }
+}
+@media (min-width: 611px) and (max-width: 1023px){
+    main{
+        grid-template-rows: 10% 90% 100%;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+            "header header"
+            "screen skills"
+            "instructions instructions";
+    }   
+    header>a{
+        display: block;
+        margin-left: auto;
+        padding: 2%;
+    }
+}
+@media(min-width: 1024px){
+    
+}
+
+/* .............SCROLLBAR.............. */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #0c1b2e;
+    border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #133561;
+}
+::-webkit-scrollbar-track{
+    background: #0c1b2e6c;
+    border-radius: 0px;
+}

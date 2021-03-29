@@ -15,12 +15,12 @@ let potion2Audio = new Audio('sounds/potion2.ogg');
 let powerUpAudio = new Audio('sounds/powerUp.ogg');
 let buttonAudio = new Audio('sounds/button.mp3');
 let bloodAudio = new Audio('sounds/bloodlust.mp3');
-let introMusic = new Audio("../musica/Evil Morty's Theme (For The Damaged Coda) [8 Bit Tribute to Blonde Redhead & Rick and Morty].mp3");
+let introMusic = new Audio("musica/Evil Morty's Theme (For The Damaged Coda) [8 Bit Tribute to Blonde Redhead & Rick and Morty].mp3");
 let music = [
-    new Audio("../musica/Believer [8 Bit Tribute to Imagine Dragons] - 8 Bit Universe.mp3"),
-    new Audio("../musica/Eye of the Tiger (8 Bit Remix Cover Version) [Tribute to Survivor] - 8 Bit Universe.mp3"),
-    new Audio("../musica/Gods Plan [8 Bit Tribute to Drake] - 8 Bit Universe.mp3"),
-    new Audio("../musica/Highest In The Room [8 Bit Tribute to Travis Scott] - 8 Bit Universe.mp3")
+    new Audio("musica/Believer [8 Bit Tribute to Imagine Dragons] - 8 Bit Universe.mp3"),
+    new Audio("musica/Eye of the Tiger (8 Bit Remix Cover Version) [Tribute to Survivor] - 8 Bit Universe.mp3"),
+    new Audio("musica/Gods Plan [8 Bit Tribute to Drake] - 8 Bit Universe.mp3"),
+    new Audio("musica/Highest In The Room [8 Bit Tribute to Travis Scott] - 8 Bit Universe.mp3")
 ]
 
 // ----------------------OBJETOS--------------------------- //
@@ -37,7 +37,7 @@ let skill1 = { //ATAQUE MÁS FUERTE
     used: false,
     y: 450
 }
-skill1.img.src = "../images/items/sword.png"
+skill1.img.src = "images/items/sword.png"
 
 let skill2 = { //AUMENTA A DEFENSA MAXIMA
     img: new Image(),
@@ -51,7 +51,7 @@ let skill2 = { //AUMENTA A DEFENSA MAXIMA
     used: false,
     y: 420
 }
-skill2.img.src = "../images/hud/shield.png";
+skill2.img.src = "images/hud/shield.png";
 
 let skill3 ={ // ATACA y ROBA VIDA
     img: new Image(),
@@ -66,7 +66,7 @@ let skill3 ={ // ATACA y ROBA VIDA
     used: false,
     y: 420
 }
-skill3.img.src = "../images/hud/bloodlust.png";
+skill3.img.src = "images/hud/bloodlust.png";
 
 let item1 = { //LATA HP
     upgradeNumber: 1,
@@ -400,7 +400,7 @@ function showHideShop (){
     if (skillsBar.style.display == "flex"){
         skillsBar.style.display = "none";
         shopBar.style.display = "flex";
-        shopIcon.style.backgroundImage = "url('../images/hud/red_arrow.png')";
+        shopIcon.style.backgroundImage = "url('images/hud/red_arrow.png')";
         shopIcon.style.backgroundSize = "100% 100%"
         buttonAudio.currentTime = 0;
         buttonAudio.play();
@@ -409,7 +409,7 @@ function showHideShop (){
     else{
         skillsBar.style.display = "flex";
         shopBar.style.display = "none";
-        shopIcon.style.backgroundImage = "url('../images/hud/store.png')";
+        shopIcon.style.backgroundImage = "url('images/hud/store.png')";
         shopIcon.style.backgroundSize = "110% 200%"
         buttonAudio.currentTime = 0;
         buttonAudio.play();
